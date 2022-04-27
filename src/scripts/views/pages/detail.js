@@ -21,20 +21,19 @@ const Detail = {
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const restaurant = await RestaurantSource.detailRestaurants(url.id);
-    const restaurantDetail = restaurant.restaurant;
     const restaurantContainer = document.querySelector('#restoList');
-    restaurantContainer.innerHTML = createRestaurantDetailTemplate(restaurantDetail);
+    restaurantContainer.innerHTML = createRestaurantDetailTemplate(restaurant);
 
     LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
       restaurant: {
-        id: restaurantDetail.id,
-        name: restaurantDetail.name,
-        description: restaurantDetail.description,
-        city: restaurantDetail.city,
-        address: restaurantDetail.address,
-        pictureId: restaurantDetail.pictureId,
-        rating: restaurantDetail.rating,
+        id: restaurant.id,
+        name: restaurant.name,
+        description: restaurant.description,
+        city: restaurant.city,
+        address: restaurant.address,
+        pictureId: restaurant.pictureId,
+        rating: restaurant.rating,
       },
     });
   },

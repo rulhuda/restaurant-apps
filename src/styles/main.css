@@ -277,6 +277,10 @@
     border-bottom: 1px solid #ddd;
   }
 
+  .resto-item__heading-detail{
+    color: #278b8a;
+  }
+
   .menu-item{
     border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;

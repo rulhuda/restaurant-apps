@@ -1,5 +1,7 @@
 import FavoriteRestaurantIdb from '../data/favoriterestaurant-idb';
+import CONFIG from '../globals/config';
 import { createLikeButtonTemplate, createLikedButtonTemplate } from '../views/templates/template-creator';
+import NotificationHelper from './notification-helper';
 
 const LikeButtonInitiator = {
   async init({ likeButtonContainer, restaurant }) {
@@ -29,7 +31,14 @@ const LikeButtonInitiator = {
     const likeButton = document.querySelector('#likeButton');
     likeButton.addEventListener('click', async () => {
       await FavoriteRestaurantIdb.putRestaurant(this._restaurant);
-      this._renderButton();
+      NotificationHelper.sendNotification({
+        title: `${this._restaurant.name}`,
+        options: {
+          body: this._restaurant.description,
+          image: CONFIG.BASE_IMAGE_URL_M + this._restaurant.pictureId,
+        },
+      });
+      await this._renderButton();
     });
   },
 
