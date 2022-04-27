@@ -50,7 +50,7 @@
     background-color: #fff;
     min-width: 1000px;
     min-height: 95vh;
-    background-image: url('../public/images/heros/hero-image-restaurant.jpg');
+    /* background-image: url('./images/heros/hero-image-restaurant.jpg'); */
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;

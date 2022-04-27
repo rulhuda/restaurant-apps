@@ -4,7 +4,7 @@ import { createRestaurantItemTemplate } from '../templates/template-creator';
 const ListRestaurants = {
   async render() {
     return `
-    <div class="hero">
+    <div class="hero" style="background-image: url('images/heros/hero-image-restaurant.jpg');">
         <div class="hero__inner">
             <h1 tabindex="1" class="hero__title" aria-label="this hero title is SERESTA">SERESTA</h1>
             <br>
