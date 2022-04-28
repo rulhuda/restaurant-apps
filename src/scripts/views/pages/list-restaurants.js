@@ -41,11 +41,9 @@ const ListRestaurants = {
     searchForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       const restaurantResult = await RestaurantSource.searchRestaurant(keyword.value);
-      console.log(restaurantResult);
       const searchValue = document.querySelector('#searchValue');
       searchValue.innerText = `Your search : ${keyword.value}`;
       if (restaurantResult.length === 0) {
-        console.log(`${keyword.value} tidak ditemukan`);
         return;
       }
       const restaurantList = document.querySelector('#restoList');

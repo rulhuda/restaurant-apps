@@ -1,4 +1,3 @@
-/* eslint-disable consistent-return */
 import API_ENDPOINT from '../globals/api-endpoint';
 
 class RestaurantSource {
@@ -32,7 +31,7 @@ class RestaurantSource {
       const responseJson = await response.json();
       return responseJson;
     } catch (error) {
-      console.error(error);
+      throw new Error(error.message);
     }
   }
 }

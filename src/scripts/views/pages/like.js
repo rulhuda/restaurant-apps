@@ -19,8 +19,7 @@ const Like = {
     const restaurants = await FavoriteRestaurantIdb.getAllRestaurant();
     const restaurantContainer = document.querySelector('#restoList');
     if (restaurants.length === 0) {
-      console.log('Tidak ada resto!');
-      restaurantContainer.innerHTML = `<h2 class="text-alert text-center">Add favorite restaurant first!</h2>
+      restaurantContainer.innerHTML = `<h2 class="text-alert text-center">Add your favorite restaurants first!</h2>
       `;
       return;
     }
