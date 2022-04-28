@@ -72,7 +72,9 @@
 
   .hero__tagline {
     font-size: 3.5em;
-    color: #54bab9;
+    color: #eee;
+    outline: 4px #54bab9;
+    background-color: rgba(0, 0, 0, 0.3);
     font-weight: bold;
   }
   
@@ -318,6 +320,33 @@
     display: block;
     border-bottom: 1px solid #ddd;
   }
+  label{
+    font-size: 1.1em;
+  }
+  .form-control{
+    font-size: 1.1em;
+    border: 0;
+    border-radius: 8px;
+    padding: 4px 8px;
+    font-family: 'Source Sans Pro', sans-serif;
+    outline: 2px solid #278b8a;
+  }
+  .search{
+    width: 100%;
+  }
+  .post{
+    width: 80%;
+    font-family: 'Source Sans Pro', sans-serif;
+    outline: 2px solid #278b8a;
+  }
+  .btn-search{
+    margin-top: 5px;
+    outline: 2px solid #278b8a;
+  }
+  .btn-post{
+    margin-top: 5px;
+    outline: 2px solid #278b8a;
+  }
   button {
     padding: 10px 20px;
     cursor: pointer;
@@ -359,6 +388,10 @@
   .fc-hero-2{
     color: #ddd;
     -webkit-text-stroke: 0.5px #333;
+  }
+
+  .text-white {
+    color: white;
   }
   
   .text-alert {

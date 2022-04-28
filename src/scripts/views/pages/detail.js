@@ -36,6 +36,26 @@ const Detail = {
         rating: restaurant.rating,
       },
     });
+
+    const formPost = document.querySelector('#postReview');
+    const txtId = document.querySelector('#txtId');
+    const txtName = document.querySelector('#txtName');
+    const txtReview = document.querySelector('#txtReview');
+    formPost.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const review = {
+        id: txtId.value,
+        name: txtName.value,
+        review: txtReview.value,
+      };
+      const postReview = RestaurantSource.addReview(review);
+      console.log(postReview);
+      setTimeout(() => {
+        const timestamp = new Date().toISOString();
+        window.location.href = `/#/detail/${txtId.value}?update=${timestamp}`;
+      }, 2000);
+      restaurantContainer.innerHTML = createRestaurantDetailTemplate(restaurant);
+    });
   },
 };
 

@@ -13,6 +13,28 @@ class RestaurantSource {
     const responseJson = await response.json();
     return responseJson.restaurant;
   }
+
+  static async searchRestaurant(query) {
+    const response = await fetch(API_ENDPOINT.SEARCH(query));
+    const responseJson = await response.json();
+    return responseJson.restaurants;
+  }
+
+  static async addReview(review) {
+    try {
+      const response = await fetch(API_ENDPOINT.ADD_REVIEW, {
+        method: 'POST',
+        headers: {
+          'Content-type': 'application/json',
+        },
+        body: JSON.stringify(review),
+      });
+      const responseJson = await response.json();
+      return responseJson;
+    } catch (error) {
+      console.error(error);
+    }
+  }
 }
 
 export default RestaurantSource;
