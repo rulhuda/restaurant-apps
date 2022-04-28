@@ -6,7 +6,9 @@ const createRestaurantDetailTemplate = (restaurant) => `
   <img class="resto-item__thumbnail" src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL_M + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}" alt="this photo of ${restaurant.name} restaurant.">
   <div class="resto-item__content">
       <p class="resto-item__rating" aria-label="This cafe rating is ${restaurant.rating}.">Rating  : ${restaurant.rating}</p>
+
       <h3 class="resto-item__name-detail" aria-label="This restaurant name is ${restaurant.name}.">${restaurant.name}</h3>
+
       <h3 class="resto-item__menu resto-item__heading-detail">Restaurant Menu</h3>
       <div class="list-menus">
         <div class="menu-item">
@@ -19,14 +21,34 @@ const createRestaurantDetailTemplate = (restaurant) => `
         </div>
       </div>
       <br>
+
       <h3 class="resto-item__heading-detail">Address:</h3>
       <br>
+
       <p class="resto-item__address-detail">${restaurant.address}</p>
       <br>
+
       <h3 class="resto-item__heading-detail">Description:</h3>
       <br>
+
       <p class="resto-item__description-detail" aria-label="This restaurant description is ${restaurant.description}">${restaurant.description}.</p>
       <br>
+
+      <h3 class="resto-item__heading-detail">Form Review</h3>
+      <form id="postReview">
+        <input type="hidden" id="txtId" value="${restaurant.id}">
+        <label for="txtName">Your Name :</label>
+        <br>
+        <input type="text" id="txtName" placeholder="Type your name here..." class="form-control post">
+        <br>
+        <label for="txtReview">Your Review :</label>
+        <br>
+        <textarea id="txtReview" placeholder="Type your review here..." class="form-control post"></textarea>
+        <br>
+        <button type="submit" class="btn-post">Post</button>
+      </form>
+      <br>
+
       ${restaurant.customerReviews.reduce((show, value) => show.concat(`<br>
         <h4>${value.name}</h4>
         <p class="text-muted">${value.review}</p>

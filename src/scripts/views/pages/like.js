@@ -3,7 +3,7 @@ import { createRestaurantItemTemplate } from '../templates/template-creator';
 
 const Like = {
   async render() {
-    return `
+    return `  
     <section class="content">
     <div id="restaurants" class="restaurants">
         <h3 tabindex="1" class="resto__label" aria-label="this is restaurant label and above a list of restaurants.">Your Liked Restaurants</h3>
@@ -16,11 +16,18 @@ const Like = {
   },
 
   async afterRender() {
-    const restaurants = await FavoriteRestaurantIdb.getAllRestaurant();
-    const restaurantContainer = document.querySelector('#restoList');
-    restaurants.forEach((restaurant) => {
-      restaurantContainer.innerHTML += createRestaurantItemTemplate(restaurant);
-    });
+    try {
+      const restaurants = await FavoriteRestaurantIdb.getAllRestaurant();
+      const restaurantContainer = document.querySelector('#restoList');
+      restaurants.forEach((restaurant) => {
+        restaurantContainer.innerHTML += createRestaurantItemTemplate(restaurant);
+      });
+    } catch (error) {
+      console.error(error);
+      setTimeout(() => {
+        window.location.reload();
+      }, 5000);
+    }
   },
 };
 
