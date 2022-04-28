@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start-dev": "webpack-dev-server --config webpack.dev.js --port 8000",
+    "start-dev": "webpack-dev-server --config webpack.dev.js --port 8001",
     "build": "webpack --config webpack.prod.js",
-    "lint" : "eslint ./src",
+    "lint": "eslint ./src",
     "test": "karma start"
   },
   "keywords": [],
@@ -40,6 +40,7 @@
   "dependencies": {
     "idb": "^7.0.1",
     "regenerator-runtime": "^0.13.9",
-    "serviceworker-webpack-plugin": "^1.0.1"
+    "serviceworker-webpack-plugin": "^1.0.1",
+    "sweetalert": "^2.1.2"
   }
 }

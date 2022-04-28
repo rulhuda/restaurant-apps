@@ -18,6 +18,12 @@ const Like = {
   async afterRender() {
     const restaurants = await FavoriteRestaurantIdb.getAllRestaurant();
     const restaurantContainer = document.querySelector('#restoList');
+    if (restaurants.length === 0) {
+      console.log('Tidak ada resto!');
+      restaurantContainer.innerHTML = `<h2 class="text-alert text-center">Add favorite restaurant first!</h2>
+      `;
+      return;
+    }
     restaurants.forEach((restaurant) => {
       restaurantContainer.innerHTML += createRestaurantItemTemplate(restaurant);
     });

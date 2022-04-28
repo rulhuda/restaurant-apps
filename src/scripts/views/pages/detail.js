@@ -48,13 +48,33 @@ const Detail = {
         name: txtName.value,
         review: txtReview.value,
       };
-      const postReview = RestaurantSource.addReview(review);
-      console.log(postReview);
-      setTimeout(() => {
-        const timestamp = new Date().toISOString();
-        window.location.href = `/#/detail/${txtId.value}?update=${timestamp}`;
-      }, 2000);
-      restaurantContainer.innerHTML = createRestaurantDetailTemplate(restaurant);
+      const postReview = await RestaurantSource.addReview(review);
+
+      const customerReviewsElement = document.querySelector('.customer-reviews');
+
+      const reviewCustomer = (review) => {
+        let resultReview = '';
+
+        review.customerReviews.forEach((customer) => {
+          resultReview += `
+            <h4>${customer.name}</h4>
+            <p class="text-muted">${customer.review}</p>
+            <p class="text-lightblue">${customer.date}</p>
+            <br>
+          `;
+        });
+
+        return resultReview;
+      };
+
+      customerReviewsElement.innerHTML = `
+        <h3 class="customer-reviews__heading">Customer Reviews:</h3>
+        <br>
+        ${reviewCustomer(postReview)}
+      `;
+
+      txtName.value = '';
+      txtReview.value = '';
     });
   },
 };
