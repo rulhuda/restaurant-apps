@@ -34,19 +34,13 @@
         margin-top: 50px;
     }
     .hero__title {
+        width: 50%;
         font-size: 4.4em;
     }
 
     .hero__tagline {
+        width: 50%;
         font-size: 3.4em;
-    }
-
-    .hero__title{
-        width: 50%;
-    }
-
-    .hero__tagline{
-        width: 50%;
     }
 
     .search{
@@ -85,14 +79,20 @@
 
     .hero__title{
         width: 55%;
+        font-size: 3.6em;
     }
 
     .hero__tagline{
         width: 55%;
+        font-size: 2.6em;
     }
 
     .search{
         width: 55%;
+    }
+
+    .resto__label{
+        padding-top: 20px;
     }
 
     .nav__list{
@@ -122,19 +122,23 @@
 
     .hamburger {
         display: block;
+        font-size: 1.6em;
+        font-weight: bold;
+        padding: 0.3em 0.6em;
+    }
+    a.logo {
+        cursor: pointer;
+        min-width: 1vw;
+        padding: 0.3em 0.6em;
+        font-size: 1.6em;
+        color: #289391;
+        text-decoration: underline;
     }
 
     .resto-list {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .hero__title {
-        font-size: 3.6em;
-    }
-
-    .hero__tagline {
-        font-size: 2.6em;
-    }
     .resto-list-detail{
         margin: 32px auto auto;
         text-align: left;
@@ -180,6 +184,9 @@
 @media screen and (max-width: 400px) {
     header{
         min-width: 50px;
+    }
+    .hero{
+        height: 300px;
     }
     .hero__text{
         margin-top: 35px;

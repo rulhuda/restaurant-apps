@@ -29,7 +29,7 @@ const ListRestaurants = {
     
     <section class="content">
       <div id="restaurants" class="restaurants">
-          <h3 tabindex="0" class="resto__label" aria-label="this is restaurant label and above a list of restaurants.">List of Restaurants</h3>
+          <h3 tabindex="0" class="resto__label-home" aria-label="this is restaurant label and above a list of restaurants.">List of Restaurants</h3>
           <div id="restoList" class="resto-list">
 
           </div>

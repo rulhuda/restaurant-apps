@@ -49,7 +49,7 @@
   .hero{
     width: 100%;
     height: 400px;
-    margin-top: 88px;
+    margin-top: 90px;
     overflow: hidden;
     position: relative;
   }
@@ -183,6 +183,22 @@
   }
 
   .resto__label::after{
+    content: '';
+    margin-top: 16px;
+    display: block;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .resto__label-home {
+    margin-top: 0;
+    font-weight: lighter;
+    font-size: 2.8em;
+    color: #54bab9;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+  }
+
+  .resto__label-home::after{
     content: '';
     margin-top: 16px;
     display: block;

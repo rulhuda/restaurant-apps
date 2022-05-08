@@ -19,7 +19,7 @@ const Like = {
     const restaurants = await FavoriteRestaurantIdb.getAllRestaurant();
     const restaurantContainer = document.querySelector('#restoList');
     if (restaurants.length === 0) {
-      restaurantContainer.innerHTML = `<h2 class="text-alert text-center">Add your favorite restaurants first!</h2>
+      restaurantContainer.innerHTML = `<h2 id="empty-resto" class="text-alert text-center">Add your favorite restaurants first!</h2>
       `;
       return;
     }
