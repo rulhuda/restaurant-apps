@@ -72,7 +72,7 @@ const createRestaurantItemTemplate = (restaurant) => `
 `;
 
 const createLikeButtonTemplate = () => `
-  <button aria-label="like this restaruant" id="likeButton" class="like">
+  <button aria-label="like this restaurant" id="likeButton" class="like">
     <i class="far fa-heart" aria-hidden="true"></i>
   </button>
 `;
