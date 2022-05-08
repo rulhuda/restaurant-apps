@@ -40,42 +40,60 @@
     padding: 25px 10%;
     box-shadow: 2px 2px 3px #333;
     top: 0;
-    position: sticky;
+    position: fixed;
     width: 100%;
     background-color: #fff;
     z-index: 100;
   }
 
   .hero{
-    background-color: #fff;
-    min-width: 1000px;
-    min-height: 95vh;
-    /* background-image: url('./images/heros/hero-image-restaurant.jpg'); */
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    text-align: center;
+    width: 100%;
+    height: 400px;
+    margin-top: 88px;
+    overflow: hidden;
+    position: relative;
   }
 
   .hero__inner{
-    margin: 0 auto;
-    max-width: 800px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero__inner picture img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .hero__text{
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    color: #fff;
+    padding: 1.5em;
+    box-sizing: border-box;
   }
 
   .hero__title{
     font-size: 4.5em;
-    color: #fff;
     outline: 4px solid #fff;
     background-color: rgba(0, 0, 0, 0.3);
+    width: 45%;
+    margin: 0 auto;
   }
 
   .hero__tagline {
     font-size: 3.5em;
-    color: #eee;
     outline: 4px #54bab9;
     background-color: rgba(0, 0, 0, 0.3);
     font-weight: bold;
+    width: 45%;
+    margin: 0 auto;
   }
   
   .nav__list {
@@ -337,7 +355,7 @@
     outline: 2px solid #278b8a;
   }
   .search{
-    width: 100%;
+    width: 45%;
   }
   .post{
     width: 80%;

@@ -1,3 +1,4 @@
+import swal from 'sweetalert';
 import RestaurantSource from '../../data/restaurant-source';
 import UrlParser from '../../routes/url-parser';
 import { createRestaurantDetailTemplate } from '../templates/template-creator';
@@ -75,6 +76,7 @@ const Detail = {
 
       txtName.value = '';
       txtReview.value = '';
+      swal('Success', 'Post your review', 'success');
     });
   },
 };

@@ -2,8 +2,23 @@
     header{
         min-width: 1000px;
     }
-    .hero {
-        min-width: 1000px;
+
+    .hero{
+        height: 559px;
+    }
+
+    .hero__text{
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 1199px){
+    .hero{
+        height: 520px;
+    }
+
+    .hero__text{
+        margin-top: 50px;
     }
 }
 
@@ -11,8 +26,12 @@
     header{
         min-width: 820px;
     }
-    .hero {
-        min-width: 720px;
+    .hero{
+        height: 480px;
+    }
+
+    .hero__text{
+        margin-top: 50px;
     }
     .hero__title {
         font-size: 4.4em;
@@ -20,6 +39,18 @@
 
     .hero__tagline {
         font-size: 3.4em;
+    }
+
+    .hero__title{
+        width: 50%;
+    }
+
+    .hero__tagline{
+        width: 50%;
+    }
+
+    .search{
+        width: 50%;
     }
 }
 
@@ -42,6 +73,26 @@
 
     header div a {
         display: block;
+    }
+
+    .hero{
+        height: 440px;
+    }
+
+    .hero__text{
+        margin-top: 50px;
+    }
+
+    .hero__title{
+        width: 55%;
+    }
+
+    .hero__tagline{
+        width: 55%;
+    }
+
+    .search{
+        width: 55%;
     }
 
     .nav__list{
@@ -77,11 +128,6 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .hero {
-        min-width: 460px;
-        min-height: 80vh;
-    }
-
     .hero__title {
         font-size: 3.6em;
     }
@@ -96,27 +142,35 @@
         grid-template-columns: 1fr;
         gap:1em;
         width: 100%;
-      }
+    }
+
+    .hero__text{
+        margin-top: 20px;
+    }
 }
 
 @media screen and (max-width: 600px) {
     header{
         min-width: 150px;
     }
-    .hero {
-        min-width: 150px;
+    .hero__text{
+        margin-top: 40px;
     }
-
     .resto__label{
         font-size: 2.6em;
     }
-
-    .hero__title {
+    .hero__title{
         font-size: 3em;
+        width: 60%;
     }
 
-    .hero__tagline {
+    .hero__tagline{
         font-size: 1.8em;
+        width: 60%;
+    }
+
+    .search{
+        width: 60%;
     }
 
     .resto-list {
@@ -127,20 +181,25 @@
     header{
         min-width: 50px;
     }
-    .hero {
-        min-width: 50px;
-        min-height: 85vh;
+    .hero__text{
+        margin-top: 35px;
+    }
+
+    .hero__title{
+        font-size: 2.4em;
+        width: 65%;
+    }
+
+    .hero__tagline{
+        font-size: 1.4em;
+        width: 65%;
+    }
+
+    .search{
+        width: 65%;
     }
 
     .resto__label{
         font-size: 2em;
-    }
-
-    .hero__title {
-        font-size: 2.4em;
-    }
-
-    .hero__tagline {
-        font-size: 1.4em;
     }
 }

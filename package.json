@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start-dev": "webpack-dev-server --config webpack.dev.js --port 8002",
+    "start-dev": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "lint": "eslint ./src",
     "test": "karma start"
@@ -21,6 +21,7 @@
     "eslint": "^8.14.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^4.3.0",
     "jasmine-ajax": "^4.0.0",
     "jasmine-core": "^4.1.0",
@@ -38,6 +39,7 @@
     "whatwg-fetch": "^3.6.2"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.1.1",
     "idb": "^7.0.1",
     "regenerator-runtime": "^0.13.9",
     "serviceworker-webpack-plugin": "^1.0.1",

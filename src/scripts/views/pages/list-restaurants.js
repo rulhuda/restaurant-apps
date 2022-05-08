@@ -4,17 +4,26 @@ import { createRestaurantItemTemplate } from '../templates/template-creator';
 const ListRestaurants = {
   async render() {
     return `
-    <div class="hero" style="background-image: url('images/heros/hero-image-restaurant.jpg');">
+    <div class="hero">
         <div class="hero__inner">
-            <h1 tabindex="0" class="hero__title" aria-label="this hero title is SERESTA">SERESTA</h1>
-            <h2 tabindex="0" class="hero__tagline" aria-label="this hero tagline is Search Resto in Nusantara!">Search Resto in Nusantara!</h2>
-            <form id="searchForm">
-              <input type="text" placeholder="Search here..." id="keyword" class="form-control search" required>
-              <br>
-              <button type="submit" id="searchButton" class="btn-search">Search</button>
-            </form>
+            <picture>
+              <source media="(max-width: 1000px)" srcset="./images/heros/hero-image-restaurant.jpg">
+              <source media="(max-width: 800px)" srcset="./images/heros/hero-image-restaurant.jpg">
+              <source media="(max-width: 600px)" srcset="./images/heros/hero-image-restaurant.jpg">
+
+              <img src="./images/heros/hero-image-restaurant.jpg" alt="hero-image"></img>
+            </picture>
+        </div>
+        <div class="hero__text">
+          <h1 tabindex="0" class="hero__title" aria-label="this hero title is SERESTA">SERESTA</h1>
+          <h2 tabindex="0" class="hero__tagline" aria-label="this hero tagline is Search Resto in Nusantara!">Search Resto in Nusantara!</h2>
+          <form id="searchForm">
+            <input type="text" placeholder="Search here..." id="keyword" class="form-control search" required>
             <br>
-            <h3 id="searchValue" class="text-white bg-dark-transparent"></h3>
+            <button type="submit" id="searchButton" class="btn-search">Search</button>
+          </form>
+          <br>
+          <h3 id="searchValue" class="text-white bg-dark-transparent"></h3>
         </div>
     </div>
     
