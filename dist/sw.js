@@ -9,7 +9,6 @@ var serviceWorkerOption = {
     "/bundle.js",
     "/favicon.png",
     "/manifest.json",
-    "/images/heros/hero-image-restaurant.jpg",
     "/images/icons/icon-128x128.png",
     "/images/icons/icon-144x144.png",
     "/images/icons/icon-152x152.png",
@@ -18,6 +17,7 @@ var serviceWorkerOption = {
     "/images/icons/icon-512x512.png",
     "/images/icons/icon-72x72.png",
     "/images/icons/icon-96x96.png",
+    "/images/heros/hero-image-restaurant.jpg",
     "/index.html"
   ]
 };
