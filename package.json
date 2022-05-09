@@ -6,6 +6,7 @@
   "scripts": {
     "start-dev": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
+    "build-image": "node sharp.js",
     "lint": "eslint ./src",
     "test": "karma start",
     "e2e": "codeceptjs run --steps"
@@ -37,6 +38,7 @@
     "karma-sourcemap-loader": "^0.3.8",
     "karma-webpack": "^5.0.0",
     "puppeteer": "^13.7.0",
+    "sharp": "^0.30.4",
     "style-loader": "^1.2.1",
     "webpack": "^4.46.0",
     "webpack-bundle-analyzer": "^4.5.0",
