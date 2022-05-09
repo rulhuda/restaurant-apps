@@ -1,5 +1,7 @@
 import 'regenerator-runtime';
-import '@fortawesome/fontawesome-free/js/all';
+import '@fortawesome/fontawesome-free/js/fontawesome';
+import '@fortawesome/fontawesome-free/js/regular';
+import '@fortawesome/fontawesome-free/js/solid';
 import '../styles/main.css';
 import '../styles/responsive.css';
 import swRegister from './utils/sw-register';
