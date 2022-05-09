@@ -7,11 +7,12 @@ const ListRestaurants = {
     <div class="hero">
         <div class="hero__inner">
             <picture>
-              <source media="(max-width: 1000px)" srcset="./images/heros/hero-image-restaurant.jpg">
-              <source media="(max-width: 800px)" srcset="./images/heros/hero-image-restaurant.jpg">
-              <source media="(max-width: 600px)" srcset="./images/heros/hero-image-restaurant.jpg">
+              <source type="image/webp" media="(max-width: 800px)" srcset="./images/heros/hero-image-restaurant.webp">
+              <source type="image/jpeg" media="(max-width: 800px)" srcset="./images/heros/hero-image-restaurant.jpg">
+              <source type="image/webp" media="(max-width: 600px)" srcset="./images/heros/hero-image-restaurant.webp">
+              <source type="image/jpeg" media="(max-width: 600px)" srcset="./images/heros/hero-image-restaurant.jpg">
 
-              <img src="./images/heros/hero-image-restaurant.jpg" alt="hero-image"></img>
+              <img type="image/jpeg" src="./images/heros/hero-image-restaurant.jpg" alt="hero-image"></img>
             </picture>
         </div>
         <div class="hero__text">
