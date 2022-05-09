@@ -1,4 +1,6 @@
 import CONFIG from '../../globals/config';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 const createRestaurantDetailTemplate = (restaurant) => `
   <article tabindex="0" class="resto-item">
@@ -62,7 +64,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
 const createRestaurantItemTemplate = (restaurant) => `
 <article tabindex="0" class="resto-item">
 <p class="resto-item__city" aria-label="This cafe from City ${restaurant.city}, Indonesia.">City : ${restaurant.city}</p>
-<img class="resto-item__thumbnail" src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL_S + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}" alt="this photo of ${restaurant.name} restaurant.">
+<img class="lazyload resto-item__thumbnail" src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL_S + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}" alt="this photo of ${restaurant.name} restaurant.">
 <div class="resto-item__content">
     <p class="resto-item__rating" aria-label="This cafe rating is ${restaurant.rating}.">Rating  : ${restaurant.rating}</p>
     <h3 class="resto-item__name" aria-label="This restaurant name is ${restaurant.name}."><a href="/#/detail/${restaurant.id}">${restaurant.name}</a></h3>
